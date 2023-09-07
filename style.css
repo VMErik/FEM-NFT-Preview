@@ -1,0 +1,131 @@
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyan-transparent: hsl(178, 100%, 50%, 0.5);
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--very-dark-blue-main);
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: auto;
+    background-color: var(--very-dark-blue-card);
+    border-radius: 15px;
+}
+
+.card__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    cursor: pointer;
+}
+
+.card__image img {
+    width: 85%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card__image--efect {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+    background-color: var(--cyan-transparent);
+    border-radius: 15px;
+}
+
+.card__details {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    gap: 25px;
+}
+
+.card__details--description {
+    margin-top: 10px;
+}
+
+.card__details--description h1 {
+    color: var(--white);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.card__details--description h1:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.card__details--description p {
+    color: var(--soft-blue);
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.card__details--info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--very-dark-blue-line);
+}
+
+.card__details--info p:nth-child(1) {
+    color: var(--cyan);
+}
+
+.card__details--info p:nth-child(2) {
+    color: var(--soft-blue);
+}
+
+.card__details--user {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 25px;
+}
+
+.card__details--user img {
+    width: 30px;
+    border: 1px solid var(--white);
+    border-radius: 50px;
+}
+
+.card__details--user p {
+    color: var(--soft-blue);
+}
+
+.card__details--user span {
+    color: var(--white);
+}
+
+.card__details--user span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
